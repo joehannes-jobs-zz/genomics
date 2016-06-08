@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "start": "node ./node_modules/http-server/bin/http-server -p 8080 -a localhost"
+  },
+  "jspm": {
+    "dependencies": {
+      "css": "github:systemjs/plugin-css@^0.1.22",
+      "jsx": "npm:jspm-loader-jsx@^0.0.7",
+      "material-ui": "npm:material-ui@^0.15.0",
+      "react": "npm:react@^15.1.0",
+      "react-dom": "npm:react-dom@^15.1.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}

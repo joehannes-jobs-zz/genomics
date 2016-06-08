@@ -1,0 +1,41 @@
+article.grid {
+  display: inline-block;
+  position: relative;
+  margin-top: 50px !important;
+  margin-left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+article.grid > div {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-y: hidden !important;
+}
+article.grid > div > div {
+  padding: 0 !important;
+  margin: 1px !important;
+  width: 5px !important;
+  height: 5px !important;
+}
+.tile {
+  border: 1px solid grey;
+  padding: 0 !important;
+  margin: 1px !important;
+  width: 4px !important;
+  height: 4px !important;
+}
+article.play {
+  margin: 25px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-left: 50% !important;
+}
+article.play div {
+  display: inline;
+  position: relative;
+  width: auto;
+  transform: translateX(-50%);
+}
+article.play button {
+  margin: 0 !important;
+}
