@@ -1,11 +1,11 @@
 import React from 'react';
 import {GridList, GridTile} from 'material-ui/GridList';
+import ConwayActions from '../actions/ConwayActions';
 import RaisedButton from 'material-ui/RaisedButton';
-import '../styles/tiles.css!';
+import '../../styles/tiles.css!';
 
 export default class GGrid extends React.Component {
-
-  styles = {
+    styles = {
       root: {
         display: 'flex',
         flexWrap: 'wrap',
@@ -17,22 +17,18 @@ export default class GGrid extends React.Component {
       },
     };
     tick = 0;
-    tilesData = [];
 
     constructor(props) {
         super(props);
-        for (let i=0; i < 10000; i++) {
-          this.tilesData.push({ alive: false });
-        }
+        ConwayActions.generate();
     }
 
-    componentWillMount() {
-        ;
+    play () {
+      this.intervalID = setInterval(ConwayActions.tick, 1000);
     }
 
-    tick() {
-        this.tick++;
-        console.log("hallo tick");
+    stop () {
+      clearInterval(this.intervalID);
     }
 
     render() {
@@ -45,17 +41,25 @@ export default class GGrid extends React.Component {
               rows={100}
               style={this.styles.gridList}
             >
-              {this.tilesData.map((tile, k, arr) => (
+              {this.props.board.map((tile, k, arr) => (
                 <GridTile
                   key={k}
-                  className={"tile " + (tile.alive ? 'alive' : 'dead')}
+                  className={"tile " + (tile ? 'alive' : 'dead')}
                 />
               ))}
             </GridList>
           </article>
           <article className="play">
             <div>
-              <RaisedButton label="Play" secondary={true} />
+              <RaisedButton
+                label="Play"
+                secondary={true}
+                onMouseUp={this.play}
+              />
+              <RaisedButton
+                label="Stop"
+                onMouseUp={this.stop}
+              />
             </div>
           </article>
         </section>;

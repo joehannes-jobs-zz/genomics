@@ -19,8 +19,12 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.22",
+    "events": "npm:events@1.1.0",
+    "flux": "npm:flux@2.1.1",
     "jsx": "npm:jspm-loader-jsx@0.0.7",
+    "keymirror": "npm:keymirror@0.1.1",
     "material-ui": "npm:material-ui@0.15.0",
+    "object-assign": "npm:object-assign@4.1.0",
     "react": "npm:react@15.1.0",
     "react-dom": "npm:react-dom@15.1.0",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -134,11 +138,31 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:fbemitter@2.0.2": {
+      "fbjs": "npm:fbjs@0.7.2",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:fbjs@0.1.0-alpha.7": {
+      "core-js": "npm:core-js@1.2.6",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "promise": "npm:promise@7.1.1",
+      "whatwg-fetch": "npm:whatwg-fetch@0.9.0"
+    },
     "npm:fbjs@0.2.1": {
       "core-js": "npm:core-js@1.2.6",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "promise": "npm:promise@7.1.1",
       "whatwg-fetch": "npm:whatwg-fetch@0.9.0"
+    },
+    "npm:fbjs@0.7.2": {
+      "core-js": "npm:core-js@1.2.6",
+      "isomorphic-fetch": "npm:isomorphic-fetch@2.2.1",
+      "loose-envify": "npm:loose-envify@1.2.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "promise": "npm:promise@7.1.1",
+      "ua-parser-js": "npm:ua-parser-js@0.7.10"
     },
     "npm:fbjs@0.8.3": {
       "core-js": "npm:core-js@1.2.6",
@@ -149,6 +173,12 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "promise": "npm:promise@7.1.1",
       "ua-parser-js": "npm:ua-parser-js@0.7.10"
+    },
+    "npm:flux@2.1.1": {
+      "fbemitter": "npm:fbemitter@2.0.2",
+      "fbjs": "npm:fbjs@0.1.0-alpha.7",
+      "immutable": "npm:immutable@3.8.1",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:https-browserify@0.0.0": {
       "http": "github:jspm/nodelibs-http@1.7.1"

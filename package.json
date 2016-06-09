@@ -5,8 +5,12 @@
   "jspm": {
     "dependencies": {
       "css": "github:systemjs/plugin-css@^0.1.22",
+      "events": "npm:events@^1.1.0",
+      "flux": "npm:flux@^2.1.1",
       "jsx": "npm:jspm-loader-jsx@^0.0.7",
+      "keymirror": "npm:keymirror@^0.1.1",
       "material-ui": "npm:material-ui@^0.15.0",
+      "object-assign": "npm:object-assign@^4.1.0",
       "react": "npm:react@^15.1.0",
       "react-dom": "npm:react-dom@^15.1.0"
     },

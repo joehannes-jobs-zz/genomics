@@ -7,6 +7,7 @@ import MenuItem from 'material-ui/MenuItem';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import ConwayActions from '../actions/ConwayActions';
 
 export default class GToolbar extends React.Component {
 
@@ -17,6 +18,10 @@ export default class GToolbar extends React.Component {
     };
   }
 
+  generate () {
+    ConwayActions.generate();
+  }
+
   handleChange = (event, index, value) => this.setState({value});
 
   render() {
@@ -24,7 +29,11 @@ export default class GToolbar extends React.Component {
       <Toolbar>
         <ToolbarGroup>
           <ToolbarTitle text="Conway's Game of Life" />
-          <RaisedButton label="Generate" primary={true} />
+          <RaisedButton
+            label="Generate"
+            primary={true}
+            onMouseUp={this.generate}
+          />
         </ToolbarGroup>
       </Toolbar>
     );
